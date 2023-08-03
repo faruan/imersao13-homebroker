@@ -17,7 +17,7 @@ services:
     build: ./.docker/mongodb
     restart: always
     volumes:
-      - mongodb_data:/bitnami/mongodb
+      - mongodb_data:/data/db
     environment:
       MONGODB_ROOT_PASSWORD: root
       MONGO_REPLICA_HOST: db
