@@ -2,6 +2,7 @@ import { TabsGroup, TabsItem, Card } from '../../../components/flowbite-componen
 import MyOrders from '@/app/components/MyOrders';
 import { OrderForm } from '@/app/components/OrderForm';
 import { HiShoppingCart, HiArrowUp } from '../../../components/react-icons/hi';
+import { ChartComponent } from '@/app/components/ChartComponent';
 
 export default async function HomeBrokerPage({ params }: { params: { wallet_id: string; asset_id: string } }) {
   return (
@@ -41,7 +42,9 @@ export default async function HomeBrokerPage({ params }: { params: { wallet_id: 
             </Card>
           </div>
         </div>
-        <div className='col-span-3'>gráfico</div>
+        <div className='col-span-3 flex flex-grow'>
+          <ChartComponent header='Asset 1 - R$100' />
+        </div>
       </div>
     </main>
   );
